@@ -1,0 +1,40 @@
+{
+  "name": "task-planner",
+  "version": "0.0.1",
+  "description": "Scenario and task planning",
+  "repository": "git@github.com:nerjs/task-planner.git",
+  "author": "nerjs <nerjs.stap@gmail.com>",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src/*.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^16.11.1",
+    "@types/uuid": "^8.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "prom-client": "^14.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.3.2",
+    "uuid": "^8.3.2"
+  },
+  "keywords": [
+    "task",
+    "planner",
+    "random"
+  ]
+}
