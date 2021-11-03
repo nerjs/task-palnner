@@ -11,7 +11,9 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./src/*.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "npm run build && npm publish",
+    "example": "npm run build &&DEBUG=*[error] node ./dist/example.js"
   },
   "devDependencies": {
     "@types/debug": "^4.1.7",
