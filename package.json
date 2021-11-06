@@ -1,6 +1,6 @@
 {
-  "name": "task-planner",
-  "version": "0.0.1",
+  "name": "@nerjs/task-planner",
+  "version": "0.0.2",
   "description": "Scenario and task planning",
   "repository": "git@github.com:nerjs/task-planner.git",
   "author": "nerjs <nerjs.stap@gmail.com>",
@@ -12,23 +12,29 @@
   "scripts": {
     "lint": "eslint ./src/*.ts",
     "build": "tsc",
-    "publish": "npm run build && npm publish",
+    "test": "echo \"The tests are not ready yet. Tests will come soon\"",
+    "prepublish": "npm run lint && npm run test && npm run build",
     "example": "npm run build &&DEBUG=*[error] node ./dist/example.js"
   },
   "devDependencies": {
-    "@types/debug": "^4.1.7",
-    "@types/node": "^16.11.1",
-    "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "^5.1.0",
     "@typescript-eslint/parser": "^5.1.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "@types/debug": "^4.1.7",
+    "@types/node": "^16.11.1",
+    "@types/uuid": "^8.3.1"
   },
   "peerDependencies": {
     "prom-client": "^14.0.0"
+  },
+  "peerDependenciesMeta": {
+    "prom-client": {
+      "optional": true
+    }
   },
   "dependencies": {
     "debug": "^4.3.2",
